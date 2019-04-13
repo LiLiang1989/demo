@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>我的博客</title>
+<link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/static/css/style.css" rel="stylesheet">
+<link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Fixed navbar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">我的博客</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">首页</a></li>
+					<li><a href="#">随笔</a></li>
+					<li><a href="#">日志</a></li>
+					<li><a href="#">关于我</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+				    <li><a href="#" th:text="${user.username}">用户名</a></li>
+					<li><a href="#">登录</a></li>
+					<li><a href="#">注册</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="container margin-top"><div class="row">
+	
+	<div class="col-sm-8 white-bg no-padding no-margin">
+	<div class="cat"><span>文章</span></div>
+	<div class="article-list">
+	    <ul><li><a>
+	    <h4>标题</h4>
+	    <div class="intro">Elasticsearch ，简称 ES，主要运用于全文搜索、数据分析。底层使用开源库 Lucene，拥有丰富的 REST API，开箱即用。</div>
+	    <div class="publish"><i class="fa fa-calendar"></i> 2019-04-12 20:17 <i class="fa fa-user"></i> 作者</div>
+	    </a>
+	    </li>
+	    
+	   <li><a>
+	    <h4>标题</h4>
+	    <div class="intro">Elasticsearch ，简称 ES，主要运用于全文搜索、数据分析。底层使用开源库 Lucene，拥有丰富的 REST API，开箱即用。</div>
+	    <div class="publish"><i class="fa fa-calendar"></i> 2019-04-12 20:17 <i class="fa fa-user"></i> 作者</div>
+	    </a>
+	    </li><li><a>
+	    <h4>标题</h4>
+	    <div class="intro">Elasticsearch ，简称 ES，主要运用于全文搜索、数据分析。底层使用开源库 Lucene，拥有丰富的 REST API，开箱即用。</div>
+	    <div class="publish"><i class="fa fa-calendar"></i> 2019-04-12 20:17 <i class="fa fa-user"></i> 作者</div>
+	    </a>
+	    </li><li><a>
+	    <h4>标题</h4>
+	    <div class="intro">Elasticsearch ，简称 ES，主要运用于全文搜索、数据分析。底层使用开源库 Lucene，拥有丰富的 REST API，开箱即用。</div>
+	    <div class="publish"><i class="fa fa-calendar"></i> 2019-04-12 20:17 <i class="fa fa-user"></i> 作者</div>
+	    </a>
+	    </li></ul>
+	</div>
+	</div>
+	<div class="col-sm-4 white-bg margin-right-left no-padding no-margin">
+     <div class="box">
+     <div class="box-header">文章分类</div>
+     <div class="box-body"><ul class="items-block"><li><a href="#">日志</a></li><li><a href="#">随笔</a></li><li><a href="#">技术</a></li><li><a href="#">笔记</a></li><li><a href="#">图册</a></li><li><a href="#">日志</a></li><li><a href="#">随笔</a></li><li><a href="#">技术</a></li><li><a href="#">笔记</a></li><li><a href="#">图册</a></li></ul></div>
+     </div>
+     </div>
+	</div></div>
+	<script type="text/javascript" src="/static/vendor/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/vendor/bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
