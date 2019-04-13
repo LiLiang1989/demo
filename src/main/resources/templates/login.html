@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>登录博客系统</title>
+<link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+<link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container"><div class="row"><div style="width:560px;margin:50px auto 0 auto;background:#eee;padding:15px;">
+<form action="/login" method="post">
+  <div class="form-group">
+    <label for="username">用户名</label>
+<input type="text" class="form-control" name="username" placeholder="输入用户名">
+  </div>
+  <div class="form-group">
+    <label for="password">密码</label>
+    <input type="password" class="form-control" name="password" placeholder="输入密码">
+  </div>
+  <button type="submit" class="btn btn-primary">登录</button><span class="tips" th:text="${msg}"></span>
+</form>
+
+</div></div></div>
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>我的博客</title>
-<link href="/static/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
-<link href="/static/css/style.css" rel="stylesheet">
-<link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link th:href="@{/static/vendor/bootstrap/css/bootstrap.css}" rel="stylesheet">
+<link th:href="@{/static/css/style.css?v=1}" rel="stylesheet">
+<link th:href="@{/static/vendor/font-awesome/css/font-awesome.min.css}" rel="stylesheet">
 </head>
 <body>
     <!-- Fixed navbar -->
-	<nav class="navbar navbar-default navbar-fixed-top">
+	<nav class="navbar navbar-default navbar-fixed-top" style="background-color:#fff;">
 		<div class="container">
 			<div class="navbar-header">
 				<button type="button" class="navbar-toggle collapsed"
@@ -28,10 +28,12 @@
 					<li><a href="#">日志</a></li>
 					<li><a href="#">关于我</a></li>
 				</ul>
-				<ul class="nav navbar-nav navbar-right">
-				    <li><a href="#" th:text="${user.username}">用户名</a></li>
-					<li><a href="#">登录</a></li>
-					<li><a href="#">注册</a></li>
+				<ul class="nav navbar-nav navbar-right" th:if="${session.currentUser==null}">
+					<li><a href="/login">登录</a></li>
+					<li><a href="/register">注册</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right" th:if="${session.currentUser!=null}">
+				    <li><a href="#" th:text="${session.currentUser.username}">用户名</a></li>
 				</ul>
 			</div>
 		</div>
